@@ -1,4 +1,4 @@
-import Button from './components/Button/Button';
+import Button, { ButtonWithStyled } from './components/Button/Button';
 import ListItem from './components/ListItem/ListItem';
 import { ButtonAnother } from './components/Button/Button';
 import Input from './components/Input/Input';
@@ -30,7 +30,11 @@ function App() {
       />
       <Button btnText='click me' />
       <Button btnText='press me' />
+      <br />
       {/* <ButtonAnother /> */}
+      <ButtonWithStyled
+        text="Best Styled Component"
+      />
       {
         students.map(item => (<ListItem name={item.name} age={item.age} key={item.name} />))
       }

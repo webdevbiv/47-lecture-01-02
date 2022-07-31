@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import "./Button.css";
 import styles from "./Button.module.scss";
+import styled from "styled-components";
 
 const Button = ({
     btnText = '',
@@ -38,3 +39,14 @@ Button.propTypes = {
 };
 
 export default Button;
+
+export const ButtonWithStyled = ({ text }) => (
+    <StyledComponentButton>
+        {text}
+    </StyledComponentButton>
+)
+
+const StyledComponentButton = styled.button`
+    background-color: yellow;
+    color: black;
+`
