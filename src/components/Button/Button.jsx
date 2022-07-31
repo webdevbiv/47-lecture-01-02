@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
+import "./Button.css";
+import styles from "./Button.module.scss";
 
 const Button = ({
     btnText = '',
@@ -13,6 +15,8 @@ const Button = ({
     //     return <p>Loading...</p>
     // }
     return <button
+        style={{ background: 'black' }}
+        className= {`btn, ${loader ? styles.btn : styles.btnExtra}`}
         disabled={disabled}
         onClick={() => console.log(btnName)}
     >
