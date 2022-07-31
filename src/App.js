@@ -1,6 +1,7 @@
 import Button from './components/Button/Button';
 import ListItem from './components/ListItem/ListItem';
 import { ButtonAnother } from './components/Button/Button';
+import Input from './components/Input/Input';
 import './App.css';
 
 function App() {
@@ -14,6 +15,13 @@ function App() {
   ]
   return (
     <div className="App">
+      <Input
+        name="name"
+        type="text"
+        value="nateliya"
+        disabled={true}
+        check
+      />
       <div>test</div>
       <Button
         btnText='new button'

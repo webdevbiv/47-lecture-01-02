@@ -5,8 +5,9 @@ import styles from "./Button.module.scss";
 
 const Button = ({
     btnText = '',
-    disabled = true,
+    disabled = false,
     loader,
+    check,
     onClick = () => { }
 }) => {
     const btnName = "hey";
@@ -16,7 +17,7 @@ const Button = ({
     // }
     return <button
         style={{ background: 'black' }}
-        className= {`btn, ${loader ? styles.btn : styles.btnExtra}`}
+        className={`btn, ${loader ? styles.btn : styles.btnExtra}`}
         disabled={disabled}
         onClick={() => console.log(btnName)}
     >
